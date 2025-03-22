@@ -22,6 +22,12 @@ function cyan(text) {
 function bold(text) {
   return `\x1b[1m${text}\x1b[0m`;
 }
+function italic(text) {
+  return `\x1b[3m${text}\x1b[0m`;
+}
+function grey(text) {
+  return `\x1b[90m${text}\x1b[0m`;
+}
 
 // Configuration file path in user's home directory
 const CONFIG_FILE = path.join(
@@ -56,19 +62,30 @@ let server = null;
 // Main CLI program
 const program = new Command();
 
-// Configure main program options
-program
-  .name("potara")
-  .description("Simple proxy server to combine multiple ports")
-  .version("1.0.0", "-V, --version", "Output the version number")
-  .helpOption(false); // Disable default help option
+// Set the version to 1.0.0
+program.version('1.0.0', '-V, --version', 'Output the version number');
 
-// Override help output (real solution)
+// Override help output but keep version output
 program.configureOutput({
   outputError: (str, write) => write(red(str)),
-  writeOut: (str) => {}, // Suppress default help output
-  writeErr: (str) => {}, // Suppress default error output
+  // Don't suppress writeOut completely to allow version to be displayed
+  writeOut: (str) => {
+    // Only suppress help output, not version output
+    if (!str.includes('version') && !str.includes('1.0.0')) {
+      return;
+    }
+    process.stdout.write(str);
+  },
+  writeErr: (str) => process.stderr.write(red(str))
 });
+
+// Add a custom version command
+program
+  .command('version')
+  .description('Display version information')
+  .action(() => {
+    console.log('1.0.0');
+  });
 
 // Create a custom help command
 program
@@ -81,14 +98,13 @@ program
 
 // Function to show help information
 function showHelp() {
-  console.log(`Usage: potara [options] [command]\n`);
-  console.log(`Simple proxy server to combine multiple ports\n`);
+  console.log(`Usage: ${yellow('potara')} ${grey(`[options] [command]`)}\n`);
   console.log(`Commands:`);
   console.log(
-    `  serve [port]          Start the proxy server on specified port`
+    `  serve ${grey(`[port]`)}          Start the proxy server on specified port`
   );
-  console.log(`  add [options] <path>  Add a new route to the proxy`);
-  console.log(`  remove <path>         Remove a route from the proxy`);
+  console.log(`  add ${grey(`[options] <path>`)}  Add a new route to the proxy`);
+  console.log(`  remove ${grey(`<path>`)}         Remove a route from the proxy`);
   console.log(`  list                  List all configured routes`);
   console.log(`  stop                  Stop the proxy server`);
   console.log(`  reset                 Reset all configured routes`);
@@ -176,6 +192,7 @@ program
           );
         });
       }
+      console.log(`Press ${italic("Ctrl+C")} to stop the server.`);
     });
   });
 

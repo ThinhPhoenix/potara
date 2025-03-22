@@ -1,5 +1,5 @@
 {
-  "name": "potara-cli",
+  "name": "potara",
   "version": "1.0.0",
   "main": "potara.js",
   "bin": {
