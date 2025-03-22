@@ -1,0 +1,15 @@
+Id: ThinhPhoenix.potara-cli
+Name: Potara CLI
+Version: 1.0.0
+Publisher: ThinhPhoenix
+License: ISC
+Homepage: https://github.com/ThinhPhoenix/potara-cli
+Description: A simple CLI for proxying multiple ports
+Installers:
+  - Architecture: x64
+    InstallerType: zip
+    Url: https://github.com/ThinhPhoenix/potara-cli/releases/download/v1.0.0/potara-cli-windows.zip
+    Sha256: PUT_YOUR_SHA256_HERE
+    InstallLocation: "%LOCALAPPDATA%\\potara-cli"
+    Commands:
+      - potara
