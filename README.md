@@ -12,4 +12,4 @@ curl -fsSL https://raw.githubusercontent.com/thinhphoenix/potara/main/curl/potar
 ```
 
 ### Windows  
-[![Download Potara](https://custom-icon-badges.demolab.com/badge/-Download-blue?style=for-the-badge&logo=download&logoColor=white)](https://github.com/thinhphoenix/potara/releases/latest)  
+[![Download Potara](https://custom-icon-badges.demolab.com/badge/-Download-blue?style=for-the-badge&logo=download&logoColor=white)](https://github.com/ThinhPhoenix/potara/releases/download/v1.0.0/PotaraInstaller.exe)
