@@ -1,8 +1,8 @@
 class Potara < Formula
     desc "A simple CLI for proxying multiple ports"
     homepage "https://github.com/ThinhPhoenix/potara-cli/"
-    url "https://github.com/ThinhPhoenix/potara-cli/releases/download/v1.0.0/potara-cli-1.0.0.tgz"
-    sha256 "98eceb628e5f04860fa20037be1d7600ab508b3cac605ee0be67eb27a12e610b"
+    url "https://github.com/ThinhPhoenix/potara-cli/releases/download/v1.0.0/potara-cli.tgz"
+    sha256 "461f74afea2f5cd95d0091012359e73ffae830b3c1441a8c8e3800b33b54fa18"
   
     def install
       bin.install "potara"
