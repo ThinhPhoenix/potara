@@ -2,7 +2,7 @@
 
 ### macOS  
 ```sh
-brew tap ThinhPhoenix/potara https://github.com/thinhphoenix/potara.git
+brew tap thinhphoenix/potara https://github.com/thinhphoenix/potara.git
 brew install potara
 ```
 
