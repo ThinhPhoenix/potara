@@ -45,13 +45,13 @@ curl -fsSL https://raw.githubusercontent.com/thinhphoenix/potara/main/curl/potar
 ### Basic Commands
 
 ```
-potara serve [port]          Start the proxy server on specified port (default: 3737)
-potara add --port <port> <path>  Add a new route to the proxy
-potara remove <path>         Remove a route from the proxy
-potara list                  List all configured routes
-potara stop                  Stop the proxy server
-potara reset                 Reset all configured routes
-potara help                  Display help information
+potara serve [port]                Start the proxy server on specified port (default: 3737)
+potara add --port <port> <path>    Add a new route to the proxy
+potara remove <path>               Remove a route from the proxy
+potara list                        List all configured routes
+potara stop                        Stop the proxy server
+potara reset                       Reset all configured routes
+potara help                        Display help information
 ```
 
 ### Quick Start
