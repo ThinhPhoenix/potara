@@ -126,14 +126,6 @@ To reset the configuration:
 potara reset
 ```
 
-## License
-
-MIT
-
 ## Author
 
 ThinhPhoenix
-
-## Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
