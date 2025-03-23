@@ -17,6 +17,6 @@
     "commander": "^13.1.0",
     "express": "^4.21.2",
     "http-proxy-middleware": "^3.0.3",
-    "potara-cli": "file:"
+    "potara": "file:"
   }
 }
