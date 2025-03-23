@@ -23,7 +23,7 @@ Named after the magical Potara earrings from Dragon Ball that allow fusion, this
 ### macOS <img src="https://parsefiles.back4app.com/JPaQcFfEEQ1ePBxbf6wvzkPMEqKYHhPYv8boI1Rc/9e80c50a5802d3b0a7ec66f3fe4ce348_low_res_Finder.png" width="20"/>
 
 ```sh
-brew tap thinhphoenix/potara https://github.com/thinhphoenix/potara.git
+brew tap ThinhPhoenix/potara https://github.com/thinhphoenix/potara.git
 brew install potara
 ```
 
