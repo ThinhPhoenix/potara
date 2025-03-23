@@ -1,7 +1,7 @@
 #define MyAppName "Potara"
 #define MyAppVersion "1.0.0"
 #define MyAppPublisher "ThinhPhoenix"
-#define MyAppURL "https://github.com/thinhphoenix/potara-cli"
+#define MyAppURL "https://github.com/thinhphoenix/potara"
 #define MyAppExeName "potara.exe"
 
 [Setup]
@@ -21,6 +21,7 @@ Compression=lzma
 SolidCompression=yes
 OutputBaseFilename=PotaraInstaller
 WizardStyle=modern
+OutputDir=.
 
 [Languages]
 Name: "english"; MessagesFile: "compiler:Default.isl"
